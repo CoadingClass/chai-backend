@@ -38,3 +38,15 @@ now create folder inside src folder ==> mkdir controllers db middlewares models 
 install prettier as dev devDeendences ==> npm i D- prettier
 create prettierrc file in root folder ==> touch .prettierrc
 create prettierignore file in root folder ==> touch .prettierignore
+
+# Database connection =================
+First go to .env file and Define port and mongodburl ==>
+PORT=8000
+MONGODB_URI= mongodb+srv://govind:kusum123@cluster0.5fofhsd.mongodb.net/
+
+# Now install three packegs (mongoose, express, dotenv) 
+==> npm i mongoose express dotenv
+
+# Importent note
+ Whenever you connect with database always use (try Catch) and (async await)
+
