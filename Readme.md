@@ -33,6 +33,9 @@ go inside src folder and create these file ==> touch app.js constants.js index.j
 do some modifacation in packeg.json file add ==> "type": "module",
 now inside script object remove every thing and add ==> "dev": "nodemon src/index.js"
 
+- if you are using dotenv and using import keyword then configer like this
+  ==> "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+
 now create folder inside src folder ==> mkdir controllers db middlewares models routes utils
 
 install prettier as dev devDeendences ==> npm i D- prettier
@@ -40,13 +43,17 @@ create prettierrc file in root folder ==> touch .prettierrc
 create prettierignore file in root folder ==> touch .prettierignore
 
 # Database connection =================
+
 First go to .env file and Define port and mongodburl ==>
 PORT=8000
 MONGODB_URI= mongodb+srv://govind:kusum123@cluster0.5fofhsd.mongodb.net/
 
-# Now install three packegs (mongoose, express, dotenv) 
+# Now install three packegs (mongoose, express, dotenv)
+
 ==> npm i mongoose express dotenv
 
 # Importent note
- Whenever you connect with database always use (try Catch) and (async await)
 
+Whenever you connect with database always use (try Catch) and (async await)
+
+you can diractly write database connection code in yor src/index.js file OR else you can write dataBase Connectio Code in your src/db/index.js file
